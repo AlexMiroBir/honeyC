@@ -1,0 +1,49 @@
+{
+  "env": {
+    "node": true,
+    "es2021": true
+  },
+  "extends": [
+    "standard-with-typescript",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:prettier/recommended"
+  ],
+  "overrides": [
+    {
+      "files": ["!**/package.json"],
+      "parserOptions": {
+        "project": "tsconfig.json"
+      }
+    }
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "extraFileExtensions": [".json"]
+  },
+  "ignorePatterns": [
+    "dist/*",
+    "declarations/*",
+    "coverage/*",
+    "package.json",
+    "babel.config.json",
+    "package-lock.json"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "func-names": 0,
+    "no-unexpected-multiline": "error",
+    "no-extra-semi": "off",
+    "@typescript-eslint/no-extra-semi": "error",
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
+    "@typescript-eslint/no-unsafe-call": "off",
+    "import/prefer-default-export": "off",
+    "import/extensions": ["off", { "js": "always", "json": "never", "ts": "never" }],
+    "no-underscore-dangle": ["error", { "allow": ["_id"] }],
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-console": "error"
+  }
+}
