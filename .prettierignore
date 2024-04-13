@@ -1,0 +1,8 @@
+# Ignore artifacts:
+dist/
+declarations/
+node_modules/
+babel.config.json
+.eslintrc.json
+package-lock.json
+package.json
